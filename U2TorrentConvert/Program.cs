@@ -199,7 +199,7 @@ namespace U2TorrentConvert
             {
                 for (int j = 0; j < torrent.Trackers[i].Count; j++)
                 {
-                    if (torrent.Trackers[i][j].Contains("dmhy.org"))
+                    if (torrent.Trackers[i][j].Contains("tracker.dmhy.org") || torrent.Trackers[i][j].Contains("daydream.dmhy.best"))
                     {
                         torrent.Trackers[i][j] = $"https://daydream.dmhy.best/announce?secure={newSecureKey}";
                     }
